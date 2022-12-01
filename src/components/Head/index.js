@@ -29,7 +29,7 @@ const Head = ({todoList, setTodoList}) => {
       ]);
       storeData(todoList);
       setText('');
-      console.log(todoList);
+      
     }
   };
   const getData = async () => {
@@ -45,13 +45,13 @@ const Head = ({todoList, setTodoList}) => {
         setTodoList(data);
       })
       .catch(err => {
-        console.log(err);
+        
       });
   }, []);
 
   React.useEffect(() => {
     storeData(todoList);
-    console.log(todoList);
+    
   }, [todoList.length]);
 
   return (
